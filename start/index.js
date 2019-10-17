@@ -17,7 +17,7 @@ const bot = new Telegraf(process.env.TELEGRAM_API_TOKEN);
 const REPLY = "Welcome. You'll receive updates from HackerNews soon! 👍";
 bot.start(async (ctx) => {
     ctx.reply(REPLY);
-    const chat = await ctx.getChat();
+    const chat = await ctx.chat();
 
     // store the user id inside the values array of the ids document
     firestore
